@@ -4,12 +4,14 @@ DESARROLLO DE APLICACIÓN CON REACT Y CREATE VITE
 Esta aplicación representa una implementación avanzada de desarrollo utilizando React y la herramienta Create Vite.
 En su estructura, se integra con la API de Rick_and_Morty para proporcionar una experiencia interactiva y dinámica.
 
-Características Destacadas
-Gestión del Estado con Redux: La aplicación adopta un enfoque eficiente en la gestión del estado gracias a la integración de Redux, lo que permite una manipulación eficaz de datos a lo largo de la aplicación.
+CARACTERÍSTICAS DESTACADAS GESTIÓN DEL ESTADO CON REDUX:
+La aplicación adopta un enfoque eficiente en la gestión del estado gracias a la integración de Redux, lo que permite una manipulación eficaz de datos a lo largo de la aplicación.
 
-Organización Modular: La funcionalidad se ha segregado cuidadosamente de los componentes principales y se ha organizado en directorios especializados denominados "helpers" o "utils", fortaleciendo la legibilidad y mantenimiento del código.
+ORGANIZACIÓN MODULAR:
+La funcionalidad se ha segregado cuidadosamente de los componentes principales y se ha organizado en directorios especializados denominados "helpers" o "utils", fortaleciendo la legibilidad y mantenimiento del código.
 
-Estilización Avanzada con CSS: El diseño de la aplicación se ha cuidado meticulosamente mediante estilos en CSS, asegurando una presentación visual atractiva y coherente en toda la interfaz de usuario.
+Estilización con CSS:
+El diseño de la aplicación se ha cuidado meticulosamente mediante estilos en CSS, asegurando una presentación visual atractiva y coherente en toda la interfaz de usuario.
 
 Instrucciones de Despliegue
 Siga estos pasos para instalar la aplicación en su entorno local:
