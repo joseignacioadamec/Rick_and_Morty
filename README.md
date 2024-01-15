@@ -1,10 +1,15 @@
-CREADA LA APLICACION EN REACT CON CREATE-VITE
 
-La aplicacion esta conectada con la api Rick_and_Morty.
-Creanda con Redux, componentes y estados.
-Practicamente toda la funcionalidad esta separada de los componentes, guardada esta, 
-en carpetas nombradas o helpers o utils para mejor legibilidad tanto de los componentes como de la funcionalidad.
-Maquetada con css.
+Aplicación creada con React y Create Vite
+Esta aplicación se ha desarrollado utilizando React y Create Vite, con conexión a la API de Rick_and_Morty. 
+Se implementó utilizando Redux, componentes y estados. 
+La mayoría de la funcionalidad se ha separado de los componentes y organizado en carpetas llamadas "helpers" o "utils" 
+para mejorar la legibilidad tanto de los componentes como de la funcionalidad. El diseño ha sido estilizado con CSS.
 
-En el Directorio del proyecto ejecutar npm install.
-Arrancar el proyecto con npm start.
+Instrucciones de Uso
+En el directorio del proyecto, ejecuta el siguiente comando para instalar las dependencias:
+npm install
+
+Inicia el proyecto con el siguiente comando:
+npm start
+
+La aplicación estará disponible en http://127.0.0.1:3000/
