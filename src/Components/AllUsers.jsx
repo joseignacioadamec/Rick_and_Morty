@@ -46,7 +46,6 @@ export const AllUsers = ({ state, next }) => {
   const scrollToBottom = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
-
   return (
     <>
       <Row>
