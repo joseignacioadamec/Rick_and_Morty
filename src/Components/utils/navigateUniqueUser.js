@@ -1,5 +1,7 @@
 export const navigateUniqueUser = (id, navigate) => {
-  setTimeout(() => {
-    navigate(`/uniqueUser/${id}`);
-  }, 0);
+  if (id) {
+    setTimeout(() => {
+      navigate(`/uniqueUser/${id}`);
+    }, 0);
+  }
 };

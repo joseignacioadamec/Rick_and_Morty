@@ -11,7 +11,7 @@ export const NavbarRick = (props) => {
   const image =
     props.oneUser?.image === undefined ? notUser : props.oneUser?.image;
 
-    return (
+  return (
     <Navbar expand="sm" className="bg-body-tertiary w-100 position-navbar">
       <Container>
         <Navbar.Brand>
