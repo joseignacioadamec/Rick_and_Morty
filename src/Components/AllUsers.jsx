@@ -7,7 +7,7 @@ import { handleChangeUsers } from "./utils/handleChangeUsers";
 import { changeUserId } from "./utils/changeUserId";
 import { changeStateUsersAndNavigateRoute } from "./utils/changeStateUsersAndNavigateRoute";
 
-export const AllUsers = ( props ) => {
+export const AllUsers = (props) => {
   const navigate = useNavigate();
   const nextUsersRef = useRef(null);
   const [lastImageLoaded, setLastImageLoaded] = useState(null);
@@ -16,9 +16,8 @@ export const AllUsers = ( props ) => {
   let path = useLocation();
 
   useEffect(() => {
-    changeStateUsersAndNavigateRoute(path.pathname, navigate, props)
-  }, [path.pathname])
-  
+    changeStateUsersAndNavigateRoute(path.pathname, navigate, props);
+  }, [path.pathname]);
 
   useEffect(() => {
     if (lastImageLoaded && nextUsersRef.current) {
@@ -46,14 +45,6 @@ export const AllUsers = ( props ) => {
     };
   }, [users, itemPerPage]);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const scrollToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  };
-  
   return (
     <>
       <Row>
@@ -62,7 +53,12 @@ export const AllUsers = ( props ) => {
             <Button
               className="button-down"
               variant="primary"
-              onClick={scrollToBottom}
+              onClick={() =>
+                window.scrollTo({
+                  top: document.body.scrollHeight,
+                  behavior: "smooth",
+                })
+              }
             >
               DOWN
             </Button>
@@ -134,7 +130,7 @@ export const AllUsers = ( props ) => {
             <Button
               className="button-up"
               variant="primary"
-              onClick={scrollToTop}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               UP
             </Button>
