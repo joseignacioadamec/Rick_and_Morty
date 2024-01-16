@@ -1,17 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { changeItemPerPage } from "./utils/changeItemPerPage";
 import { handleChangeUsers } from "./utils/handleChangeUsers";
 import { changeUserId } from "./utils/changeUserId";
+import { changeStateUsersAndNavigateRoute } from "./utils/changeStateUsersAndNavigateRoute";
 
-export const AllUsers = ({ state, next }) => {
+export const AllUsers = ( props ) => {
   const navigate = useNavigate();
   const nextUsersRef = useRef(null);
   const [lastImageLoaded, setLastImageLoaded] = useState(null);
-  const itemPerPage = changeItemPerPage(state);
-  const users = handleChangeUsers(state);
+  const itemPerPage = changeItemPerPage(props.state);
+  const users = handleChangeUsers(props.state);
+  let path = useLocation();
+
+  useEffect(() => {
+    changeStateUsersAndNavigateRoute(path.pathname, navigate, props)
+  }, [path.pathname])
+  
 
   useEffect(() => {
     if (lastImageLoaded && nextUsersRef.current) {
@@ -46,6 +53,7 @@ export const AllUsers = ({ state, next }) => {
   const scrollToBottom = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
+  
   return (
     <>
       <Row>
@@ -115,7 +123,7 @@ export const AllUsers = ({ state, next }) => {
       </Row>
       <Row className="mb-1" ref={nextUsersRef}>
         <Col>
-          <Button className="button-next" onClick={next}>
+          <Button className="button-next" onClick={props.next}>
             NEXT
           </Button>
         </Col>

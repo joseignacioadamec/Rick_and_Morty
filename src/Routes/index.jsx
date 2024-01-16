@@ -18,6 +18,10 @@ export const AllRoutes = ({
   const commonProps = {
     state,
     next,
+    handleChangeStateUsersAll,
+    handleChangeStateUsersAlive,
+    handleChangeStateUsersDead,
+    handleChangeStateUsersUnknown,
   };
 
   return (
