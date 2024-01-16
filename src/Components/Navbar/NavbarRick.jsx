@@ -3,17 +3,20 @@ import { Navbar, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import notUser from "../../assets/images/icon-not-user.png";
 import { navigateToRoutes } from "./utils/navigateToRoutes";
+import { navigateUniqueUser } from "../utils/navigateUniqueUser";
 
 export const NavbarRick = (props) => {
   const navigate = useNavigate();
+  let id = props?.oneUser?.id;
   const image =
     props.oneUser?.image === undefined ? notUser : props.oneUser?.image;
 
-  return (
+    return (
     <Navbar expand="sm" className="bg-body-tertiary w-100 position-navbar">
       <Container>
         <Navbar.Brand>
           <img
+            onClick={() => navigateUniqueUser(id, navigate)}
             className="image-navbar"
             src={image}
             alt="imagen de usuario"
