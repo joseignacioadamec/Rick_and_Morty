@@ -9,8 +9,14 @@ import navLinks from "./utils/navlinks";
 export const NavbarRick = (props) => {
   const navigate = useNavigate();
   let id = props?.oneUser?.id;
-  const image =
-    props.oneUser?.image === undefined ? notUser : props.oneUser?.image;
+
+  // ASI PARA LOCAL
+  // const image =
+  //   props.oneUser?.image === undefined ? notUser : props.oneUser?.image;
+
+    //ASI PARA PRO
+    const image =
+    props.oneUser?.image === undefined ? `.${notUser}` : props.oneUser?.image;
 
   return (
     <Navbar expand="sm" className="bg-body-tertiary w-100 position-navbar">
