@@ -21,7 +21,7 @@ npm install
 Este comando descargará todas las dependencias necesarias para el proyecto en el directorio actual.
 
 Iniciar la Aplicación:
-npm start
+npm run start
 Con este comando, la aplicación arrancará localmente en http://127.0.0.1:3000/.
 
 ¡Con estos pasos completados, la aplicación estará lista para su exploración en su entorno de desarrollo local!
