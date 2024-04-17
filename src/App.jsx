@@ -28,7 +28,7 @@ function App() {
   const [storedState, setStoredState] = useState(
     sessionStorage.getItem("userState")
   );
-
+console.log(state);
   useEffect(() => {
     loadReduxAllLoadStorage({
       storedState,
